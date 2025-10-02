@@ -28,3 +28,31 @@ The purpose of this project is to demonstrate and study library classes, such
 as ArrayList, HashMap, HashSet, and Random.
 
 This project is only a first, rudimentary step towards the full solution.
+
+
+////////////////////AWNSERS TO QUESTIONS/////////////////////
+
+24: A HashMap is a data structure that stores information in key-value pairs.It stores data
+using a key and value.It helps us find the values much faster with the key.
+
+25: A Key-related methods (K):
+ get(Object key)
+ remove(Object key)
+ containsKey(Object key)
+ keySet()
+ put(K key, V value)
+
+
+Value-related methods (V):
+ containsValue(Object value)
+values()
+replace(K key, V value)
+Yes, you can use the same type for both key and value.
+
+
+26:  size() returns the number of key-value mappings in this map.
+
+
+
+
+
