@@ -53,6 +53,21 @@ Yes, you can use the same type for both key and value.
 26:  size() returns the number of key-value mappings in this map.
 
 
+28: When you add an entry to a map with a key that already exists, 
+the new value replaces the old value associated with that key.
+
+
+29: When you add an entry to a map with two different keys, both entries are stored separately. 
+Each key maps to its own value, and the map increases in size.
+
+
+
+30:  if (phoneBook.containsKey("String")) {
+            System.out.println(".... is in the phone book.");
+        } else {
+            System.out.println(".... is not in the phone book.");
+        }
+
 
 
 
