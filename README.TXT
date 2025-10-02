@@ -78,4 +78,20 @@ meaning that the key does not exist.
 you can print all the keys in a map using the .keySet() method, which returns a Set of all keys.
 
 
+34: Both HashSet and ArrayList store objects, allow nulls,
+ and support basic operations like add, remove, and iterate.
 
+ 
+ 35: HashSet returns unique words in no set order.
+ ArrayList returns all words, including duplicates, 
+ in the order they were added.
+
+ 
+ 36: If there are extra spaces between words,
+ the problem is that Java might treat them as 
+ empty strings when splitting. 
+
+ 
+ 
+ 37:
+ 
