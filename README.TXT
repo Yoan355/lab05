@@ -68,6 +68,14 @@ Each key maps to its own value, and the map increases in size.
             System.out.println(".... is not in the phone book.");
         }
 
+        
+31: When you try to look up a value and the key does not exist in the map,it shows me "null"
+meaning that the key does not exist.
+
+
+
+32: According to the Java Documentation Library,
+you can print all the keys in a map using the .keySet() method, which returns a Set of all keys.
 
 
 
