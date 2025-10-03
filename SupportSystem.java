@@ -1,4 +1,7 @@
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Arrays;
+
 /**
  * This class implements a technical support system. It is the top level class 
  * in this project. The support system communicates via text input/output 
@@ -37,14 +40,14 @@ public class SupportSystem
 
         printWelcome();
 
-        while(!finished) {
-            String input = reader.getInput();
-
-            if(input.startsWith("bye")) {
+        while(!finished) { ///Q37
+     String inputLine = reader.getInput(); 
+     String[] words = inputLine.toLowerCase().split("\\s+");
+      HashSet<String> input = new HashSet<>(Arrays.asList(words));
+       if(input.contains("bye")) {
                 finished = true;
-            }
-            else {
-                String response = responder.generateResponse();
+     }
+            else {    String response = responder.generateResponse();
                 System.out.println(response);
             }
         } 

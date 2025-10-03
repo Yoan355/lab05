@@ -1,4 +1,5 @@
-
+import java.util.HashSet;
+import java.util.HashMap;
 /**
  * The responder class represents a response generator object.
  * It is used to generate an automatic response to an input string.
