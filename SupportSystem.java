@@ -1,4 +1,4 @@
-
+import java.util.HashMap;
 /**
  * This class implements a technical support system. It is the top level class 
  * in this project. The support system communicates via text input/output 
@@ -47,9 +47,9 @@ public class SupportSystem
                 String response = responder.generateResponse();
                 System.out.println(response);
             }
-        }
+        } 
 
-        printGoodbye();
+        
     }
 
     /**
@@ -63,12 +63,47 @@ public class SupportSystem
         System.out.println("We will assist you with any problem you might have.");
         System.out.println("Please type 'bye' to exit our system.");
     }
+    
+
+public class TechSupport { ////Q33
+    private HashMap<String, String> responses;
+
+    public TechSupport() {
+        responses = new HashMap<>();
+        fillResponsesMap();
+    }
+
+    private void fillResponsesMap() {
+        responses.put("slow", "Try restarting your computer to improve performance.");
+        responses.put("crash", "Please check for software updates or reinstall the application.");
+        responses.put("internet", "Make sure your Wi-Fi is turned on and you're connected to the correct network.");
+        responses.put("password", "You can reset your password using the 'Forgot Password' link.");
+        responses.put("conatct", "If you ever need to contact us, call our number +1 514-908-8865");
+        responses.put("love","If you love our servuces,rate us on our website!");
+    }
+
+   
+    public String generateResponse(String word) {
+        String response = responses.get(word);
+        if (response != null) {
+            return response;
+        } else {
+            return pickDefaultResponse();
+        }
+    }
+
+   
+    private String pickDefaultResponse() {
+        return "I'm not sure how to help with that. Can you give us more details?";
+    }
 
     /**
      * Print a good-bye message to the screen.
      */
-    private void printGoodbye()
-    {
+    
+     private void printGoodbye(){
+    
         System.out.println("Nice talking to you. Bye...");
     }
+}
 }
