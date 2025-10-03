@@ -36,18 +36,17 @@ public class SupportSystem
      */
     public void start()
     {
-        boolean finished = false;
+        boolean finished = false; // s l ow != slow;    ["s", "l", "ow"] = slow
 
         printWelcome();
 
         while(!finished) { ///Q37
      String inputLine = reader.getInput(); 
-     String[] words = inputLine.toLowerCase().split("\\s+");
-      HashSet<String> input = new HashSet<>(Arrays.asList(words));
-       if(input.contains("bye")) {
+
+       if(inputLine == "bye") {
                 finished = true;
      }
-        else {    String response = responder.generateResponse();
+        else {    String response = responder.generateResponse(inputLine);
                 System.out.println(response);
             }
         } 
@@ -67,51 +66,4 @@ public class SupportSystem
         System.out.println("Please type 'bye' to exit our system.");
     }
     
-
-public class TechSupport { ////Q33
-    private HashMap<String, String> responses;
-
-    public TechSupport() {
-        responses = new HashMap<>();
-        fillResponsesMap();
-    }
-
-    private void fillResponsesMap() {
-        responses.put("slow", "Try restarting your computer to improve performance.");
-        responses.put("crash", "Please check for software updates or reinstall the application.");
-        responses.put("internet", "Make sure your Wi-Fi is turned on and you're connected to the correct network.");
-        responses.put("password", "You can reset your password using the 'Forgot Password' link.");
-        responses.put("conatct", "If you ever need to contact us, call our number +1 514-908-8865");
-        responses.put("love","If you love our services,rate us on our website!");
-        responses.put("noise", "Unusual noise may indicate hardware issues. Consider contacting support.");
-        responses.put("error", "Please provide the exact error message so we can assist you better.");
-
-
-
-    }
-
-   
-    public String generateResponse(String word) {
-        String response = responses.get(word);
-        if (response != null) {
-            return response;
-        } else {
-            return pickDefaultResponse();
-        }
-    }
-
-   
-    private String pickDefaultResponse() {
-        return "I'm not sure how to help with that. Can you give us more details?";
-    }
-
-    /**
-     * Print a good-bye message to the screen.
-     */
-    
-     private void printGoodbye(){
-    
-        System.out.println("Nice talking to you. Bye...");
-    }
-}
 }
