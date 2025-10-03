@@ -47,7 +47,7 @@ public class SupportSystem
        if(input.contains("bye")) {
                 finished = true;
      }
-            else {    String response = responder.generateResponse();
+        else {    String response = responder.generateResponse();
                 System.out.println(response);
             }
         } 
@@ -82,7 +82,12 @@ public class TechSupport { ////Q33
         responses.put("internet", "Make sure your Wi-Fi is turned on and you're connected to the correct network.");
         responses.put("password", "You can reset your password using the 'Forgot Password' link.");
         responses.put("conatct", "If you ever need to contact us, call our number +1 514-908-8865");
-        responses.put("love","If you love our servuces,rate us on our website!");
+        responses.put("love","If you love our services,rate us on our website!");
+        responses.put("noise", "Unusual noise may indicate hardware issues. Consider contacting support.");
+        responses.put("error", "Please provide the exact error message so we can assist you better.");
+
+
+
     }
 
    
