@@ -21,7 +21,7 @@ public class Responder
         fillResponsesMap();
     }
     
-        private void fillResponsesMap() {
+        private void fillResponsesMap() { ////Q40
         String performanceTip = ("Try restarting your computer to improve performance.");
         String internetTip = ("Make sure your Wi-Fi is turned on and you're connected to the correct network.");
         String loveTip = ("If you enjoy our services,rate us on our website");
